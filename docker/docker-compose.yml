@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+    skeleton:
+        build: .
+        container_name: "skeleton"
+        ports:
+            - "80:80"
+        volumes:
+            - ../:/var/www/html/
+        env_file:
+            - variables.env
